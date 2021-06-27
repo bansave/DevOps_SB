@@ -1,0 +1,9 @@
+FROM nginx:1.21.0
+
+COPY . /usr/share/nginx/html
+EXPOSE 80
+
+COPY    hello.txt /var/www/
+COPY    nginxconf.conf /etc/nginx/conf.d/nginxconf.conf
+COPY    nginx.conf /etc/nginx/nginx.conf
+
